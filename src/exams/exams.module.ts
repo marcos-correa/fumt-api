@@ -13,6 +13,7 @@ import { ExamsService } from './exams.service';
     MongooseModule.forFeature([{name:'Alternative', schema: AlternativeSchema }])
   ],
   controllers: [ExamsController],
-  providers: [ExamsService]
+  providers: [ExamsService],
+  exports:[ExamsService]
 })
 export class ExamsModule {}

@@ -1,4 +1,4 @@
-import { StudentsModule } from './students/students.module';
+import { AnswersModule } from './answers/answers.module';
 import { UsersModule } from './users/users.module';
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
@@ -10,7 +10,7 @@ import { ExamsModule } from './exams/exams.module';
 
 @Module({
   imports: [
-    StudentsModule,
+    AnswersModule,
     UsersModule,
     AuthModule,
     ExamsModule,
