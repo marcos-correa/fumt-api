@@ -11,11 +11,6 @@ export class AnswersController {
 
   }
 
-  // @Get('getExamToAnswer/:userid/:examid')
-  // async getExamToAnswer(@Param('userid') userid:string, @Param('examid') examid:string): Promise<Student>{
-  //   return this.studentsService.getExamToAnswer(userid, examid)
-  // }
-
   @Get(':id')
   async getAnswerById(@Param('id') id: string): Promise<Answer>{
     return this.answersService.getAnswerById(id)
@@ -35,15 +30,5 @@ export class AnswersController {
   async createAnswer(@Body() answer: Answer): Promise<Answer>{
     return this.answersService.createAnswer(answer)
   }
-
-  // @Put(':id')
-  // async updateExam(@Param('id') id: string, @Body() exam: Exam): Promise<Exam>{
-  //   return this.studentsService.updateExam(id, exam);
-  // }
-
-  // @Delete(':id')
-  // async deleteExam(@Param('id') id: string){
-  //   this.studentsService.deleteExam(id)
-  // }
 
 }
