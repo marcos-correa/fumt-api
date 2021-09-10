@@ -1,16 +1,9 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import * as mongoose from "mongoose";
 
 /**
  * Banco de dados
  */
-mongoose.connect(
-  process.env.MONGO_URL,
-  {
-    useNewUrlParser: true
-  }
-)
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
