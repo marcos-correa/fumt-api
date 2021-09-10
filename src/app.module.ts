@@ -6,6 +6,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { ExamsModule } from './exams/exams.module';
+import { ConfigModule } from '@nestjs/config';
 
 
 @Module({
@@ -14,7 +15,8 @@ import { ExamsModule } from './exams/exams.module';
     UsersModule,
     AuthModule,
     ExamsModule,
-    MongooseModule.forRoot('mongodb+srv://db_user:QRZw83nhnTnQQ0VX@cluster0.enw1i.mongodb.net/fumt?retryWrites=true&w=majority')
+    ConfigModule.forRoot(),
+    MongooseModule.forRoot(process.env.MONGO_URL)
   ],
   controllers: [AppController,],
   providers: [AppService,],
