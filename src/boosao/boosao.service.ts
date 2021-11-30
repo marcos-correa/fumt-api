@@ -22,16 +22,17 @@ export class BoosaoService {
     return response.data
   }
   
-  // async getBus(){
-  //   return 'esponse.data'
-  //   // const response = await this.httpService.get("http://www.poatransporte.com.br/php/facades/process.php?a=nc&p=%25&t=o").toPromise()
-  // }
+  async getVan(): Promise<AxiosResponse>{
+    const response = await this.httpService.get("http://www.poatransporte.com.br/php/facades/process.php?a=nc&p=%25&t=l").toPromise()
+    return response.data
+  }
 
   // async getVan(){
   //   return await 
   // }
 
-  // async getItinerary(id){
-  //   return await 
-  // }
+  async getItinerary(id){
+    const response = await this.httpService.get("http://www.poatransporte.com.br/php/facades/process.php?a=il&p="+id).toPromise()
+    return response.data 
+  }
 }
