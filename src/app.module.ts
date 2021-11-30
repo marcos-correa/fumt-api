@@ -1,3 +1,4 @@
+import { BoosaoModule } from './boosao/boosao.module';
 import { AnswersModule } from './answers/answers.module';
 import { UsersModule } from './users/users.module';
 import { Module } from '@nestjs/common';
@@ -11,6 +12,7 @@ import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    BoosaoModule,
     AnswersModule,
     UsersModule,
     AuthModule,
