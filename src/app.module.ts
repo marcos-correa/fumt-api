@@ -13,6 +13,7 @@ import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    BookModule,
     BoosaoModule,
     AnswersModule,
     UsersModule,
