@@ -1,3 +1,4 @@
+import { BookModule } from './book/book.module';
 import { BoosaoModule } from './boosao/boosao.module';
 import { AnswersModule } from './answers/answers.module';
 import { UsersModule } from './users/users.module';
