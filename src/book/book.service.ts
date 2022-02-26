@@ -17,9 +17,8 @@ export class BookService {
   ) { }
 
 
-  async getHello(): Promise<AxiosResponse>{
-    // let resposta = {data:{message:"Oie"}}
-    const response = await this.httpService.get("http://www.poatransporte.com.br/php/facades/process.php?a=nc&p=%25&t=l").toPromise()
+  async getHello(): Promise<any>{
+    const response = await this.httpService.get("http://publishing-house-service.herokuapp.com/").toPromise()
     return response.data
     // return resposta.data;
   }

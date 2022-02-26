@@ -17,9 +17,8 @@ export class BookController {
 
   }
 
-  @Get('/hello')
+  @Get('/')
   async getHello(){
-    console.log("cheguei no controller")
     return await this.bookService.getHello()
   }
   
